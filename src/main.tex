@@ -7,10 +7,18 @@
 
 \usepackage{notes-preamble/allpacks}
 
-\titlebook{Lorem Ipsum}{John Doe}{Mary Doe}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\prodi}[2]{\left<#1,#2\right>}
+\newcommand{\prodiv}[2]{\prodi{\vec{#1}}{\vec{#2}}}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\normv}[1]{\vec{\norm{#1}}}
+\newcommand{\normprodi}[1]{\norm{#1}_{\prodi{}{}}}
+\newcommand{\normprodiv}[1]{\normprodi{\vec{#1}}}
+
+\titlecourse{Análise no $\reals^n$}{Ailton Silva}{Josenaldo Júnior}
 \begin{document}
 
 \maketitle
-\importsectionnotes{sample-section}
+\importsectionnotes{all}
 
 \end{document}

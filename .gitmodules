@@ -1,3 +1,6 @@
 [submodule "notes-preamble"]
 	path = notes-preamble
 	url = https://github.com/jjosenaldo/notes-preamble
+[submodule "notes-template"]
+	path = notes-template
+	url = https://github.com/jjosenaldo/notes-template

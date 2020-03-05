@@ -1,0 +1,70 @@
+\section{Análise no $\reals^n$}
+
+\begin{definition}[Espaço Vetorial]
+	Um \emph{espaço vetorial} $(E,+,\cdot)$ é tal que as operações
+	$+:E\times E \to E$ e $\cdot: \reals \times E \to E$ satisfazem 
+	as seguintes propriedades:
+	\begin{itemize}
+		\item $(E,+)$ é um grupo abeliano;
+		\item $1\cdot \vec x = \vec x$;
+		\item $a\cdot (b\cdot \vec x) = (a\cdot b)\cdot \vec x$;
+		\item $(a+b)\cdot \vec x = a\cdot \vec x + b\cdot \vec x$;
+		\item $a\cdot (\vec x + \vec y) = a \cdot \vec x + a \cdot \vec y$.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}[Produto Interno]
+	Seja $E$ um espaço vetorial. Um \emph{produto interno} em $E$ é uma função $\prodi{}{}:E\times E \to \reals$
+	que verifica:
+	\begin{enumerate}
+		\item $\prodiv xy = \prodiv yx$;
+		\item $\prodiv{x+y}z = \prodiv xz + \prodiv yz$;
+		\item $\prodi{a \vec x}{\vec y} = a\prodiv xy$;
+		\item $\prodiv xx \ge 0$, e $\prodiv xx = 0 \iff \vec x = \vec 0$.
+	\end{enumerate}
+	Um espaço vetorial com produto interno é chamado de \emph{espaço com produto interno}.
+\end{definition}
+
+\begin{definition}[Matriz Definida Positiva]
+	Uma matriz quadrada $A = (a_{ij})_n$ é \emph{definida positiva} quando, para todo $\vec x \in \reals^n$ não nulo,
+	\[\sum\limits_{i=1}^n \sum\limits_{j=1}^n a_{ij}x_ix_j > 0\]
+\end{definition}
+
+\begin{fact}
+	Dada uma matriz definida positiva $A = (a_{ij})_n$, a função $\prodi : \reals^n \times \reals^n \to \reals$
+	dada por
+	\[\prodiv xy = \sum\limits_{i=1}^n \sum\limits_{j=1}^n a_{ij}x_iy_j \]
+	é um produto interno. Podem-se, então, definir uma quantidade não enumerável de produtos internos no espaço 
+	$\reals^n$.
+\end{fact}
+
+\begin{definition}[Norma Associada ao Produto Interno]
+	A \emph{norma $\normprodi{} : E \to \reals$ associada a um produto interno (NAPI)}
+	$\prodi{}{}$
+	 de um espaço vetorial $E$ é definida da seguinte forma:
+	\[\normprodiv{x} = \sqrt{\prodiv xx}\]
+\end{definition}
+
+\begin{theorem}[Desigualdade de Cauchy--Schwarz]
+	\[\modu{\prodiv xy} \le \normprodiv x \cdot \normprodiv y \]
+	A igualdade é válida sse $\vec x$ e $\vec y$ são LD.
+\end{theorem}
+
+\begin{fact}
+	\[\normprodi{\vec x + \vec y} \le \normprodiv x + \normprodiv y \]
+\end{fact}
+
+\begin{definition}[Norma em um Espaço Vetorial]
+	Uma \emph{norma} num espaço $E$ é uma aplicação $\norm{} : E \to \reals$
+	satisfazendo o seguinte:
+	\begin{enumerate}
+		\item $\normv x \ge 0$, e $\normv x = 0 \iff x = 0$;
+		\item $\norm{a\vec x} = \modu a \normv x$ (homogeneidade);
+		\item $\norm{\vec x + \vec y} \le \normv x + \normv y$ (desigualdade triangular).
+	\end{enumerate}
+	Um espaço vetorial é \emph{normado} quando ele tem uma norma.
+\end{definition}
+
+\begin{fact}
+	A NAPI é uma norma.
+\end{fact}
