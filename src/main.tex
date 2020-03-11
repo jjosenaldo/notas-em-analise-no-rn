@@ -7,6 +7,11 @@
 
 \usepackage{notes-preamble/allpacks}
 
+\DeclareMathOperator{\ball}{B}
+\DeclareMathOperator{\sphere}{S}
+\newcommand{\oball}[2]{\ball\prn{#1,#2}}
+\newcommand{\cball}[2]{\ball\brak{#1,#2}}
+
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
 \newcommand{\prodi}[2]{\left<#1,#2\right>}
 \newcommand{\prodiv}[2]{\prodi{\vec{#1}}{\vec{#2}}}
@@ -14,6 +19,20 @@
 \newcommand{\normv}[1]{\vec{\norm{#1}}}
 \newcommand{\normprodi}[1]{\norm{#1}_{\prodi{}{}}}
 \newcommand{\normprodiv}[1]{\normprodi{\vec{#1}}}
+\newcommand{\normmax}[1]{\norm{#1}_{\text{max}}}
+\newcommand{\normmaxv}[1]{\normmax{\vec{#1}}}
+\newcommand{\norms}[1]{\norm{#1}_{\text s}}
+\newcommand{\normsv}[1]{\norms{\vec{#1}}}
+\newcommand{\normeuc}[1]{\norm{#1}_{\text{euc}}}
+\newcommand{\normeucv}[1]{\normeuc{\vec{#1}}}
+\newcommand{\rn}{\reals^n}
+\newcommand{\st}{\mathrel{;}}
+
+\newcommand{\prn}{\paren}
+\newcommand{\brak}[1]{\left[#1\right]}
+
+\theoremstyle{definition}
+\newtheorem*{remark}{Remark}
 
 \titlecourse{Análise no $\reals^n$}{Ailton Silva}{Josenaldo Júnior}
 \begin{document}

@@ -55,7 +55,7 @@
 \end{fact}
 
 \begin{definition}[Norma em um Espaço Vetorial]
-	Uma \emph{norma} num espaço $E$ é uma aplicação $\norm{} : E \to \reals$
+	Uma \emph{norma} num espaço $E$ é uma aplicação $\norm\  : E \to \reals$
 	satisfazendo o seguinte:
 	\begin{enumerate}
 		\item $\normv x \ge 0$, e $\normv x = 0 \iff x = 0$;
@@ -68,3 +68,132 @@
 \begin{fact}
 	A NAPI é uma norma.
 \end{fact}
+
+\begin{fact}
+	Seja $(E,\norm\ )$ um espaço normado. Então 
+	\[\modu{\normv x - \normv y} \le \norm{\vec x - \vec y}\]
+\end{fact}
+
+\begin{definition}[Norma do Máximo]
+	\[\normmaxv x = \max\limits_{1\le i \le n}\modu{x_i}\]
+\end{definition}
+
+\begin{fact}
+	A norma do máximo é uma norma em $\rn$.
+\end{fact}
+
+\begin{definition}[Norma da Soma]
+	\[\normsv x = \sum\limits_{i=1}^n \modu{x_i}\]
+\end{definition}
+
+\begin{fact}
+	A norma da soma é uma norma em $\rn$.
+\end{fact}
+
+\begin{definition}[Norma Euclidiana em $\rn$]
+	\[\normeucv x = \sqrt{\sum\limits_{i=1}^n x_i^2}\]
+	A norma euclidiana também é chamada de \emph{norma usual} em $\rn$.
+\end{definition}
+
+\begin{fact}
+	A norma euclidiana é uma norma em $\rn$.
+\end{fact}
+
+\begin{definition}[Identidade do Paralelogramo]
+	Sejam $E$ um espaço normado. A \emph{identidade do paralelogramo} é dada
+	por 
+	\[\norm{\vec x+\vec y}^2 +\norm{\vec x-\vec y}^2 = 2\prn{\normv x^2+\normv y^2} \]
+\end{definition}
+
+\begin{theorem}
+	Uma norma é proveniente de um produto interno se, e somente se, ela verifica a 
+	identidade do paralelogramo.
+\end{theorem}
+
+\begin{fact}
+	As normas do máximo e da soma em $\rn$ não satisfazem a identidade do paralelogramo
+	e, portanto, não são provenientes de produto interno.
+\end{fact}
+
+\begin{definition}[Normas Equivalentes]
+	As normas $\norm\ {}_1$ e $\norm\ {}_2$ são \emph{equivalentes} quando existem $c_1,c_2> 0$
+	tais que \[c_1 \normv x_1 \le \normv x_2 \le c_2 \normv x_1\] para todos os vetores do espaço.
+\end{definition}
+
+\begin{fact}
+	Num espaço vetorial de dimensão finita, todas as normas são equivalentes.
+\end{fact}
+
+\begin{definition}[Bola Aberta]
+	Seja $(E, \norm\ )$ um espaço normado. Uma \emph{bola aberta}  de centro $a$ e raio $ r>0$,
+	denotada por $\oball ar$ (ou $\mathrm B_r(a)$), é definida como sendo o seguinte conjunto:
+	\begin{displaymath}
+		\ball(a,r) = \set{\vec x \in E \st \norm{\vec x - \vec a} < r}
+	\end{displaymath}
+\end{definition}
+
+\begin{definition}[Bola Fechada]
+	Uma \emph{bola fechada}  de centro $a$ e raio $ r>0$,
+	denotada por $\cball ar$ (ou $\mathrm B_r[a]$), é definida como sendo o seguinte conjunto:
+	\begin{displaymath}
+		\cball ar = \set{\vec x \in E \st \norm{\vec x - \vec a} \le r}
+	\end{displaymath}
+\end{definition}
+
+\begin{definition}[Esfera]
+	Uma \emph{esfera}  de centro $a$ e raio $ r>0$,
+	denotada por $\sphere[a,r]$ (ou $\sphere_r[a]$), é definida como sendo o seguinte conjunto:
+	\begin{displaymath}
+		\sphere[a,r] = \set{\vec x \in E \st \norm{\vec x - \vec a} = r}
+	\end{displaymath}
+\end{definition}
+
+\begin{definition}[Conjunto Limitado]
+	Seja $(E,\norm\ )$ um espaço normado e $X \subset E$. Dizemos que $X$ é \emph{limitado}
+	quando existir $r>0$ tal que \[X \subset \cball {\vec 0}r\] Do contrário, o conjunto é 
+	\emph{ilimitado} (não é limitado).
+\end{definition}
+
+\begin{remark}
+	Em $\rn$, como todas as normas são equivalentes, para provar que um conjunto é limitado,
+	basta limitá-lo em qualquer norma.
+\end{remark}
+
+\begin{definition}[Função Limitada]
+	Dados $(E, \norm\ _E)$ e $(F, \norm\ _F)$ espaços normados e $f : E \to F$, dizemos que 
+	$f$ é $\emph{limitada}$ quando existe $r>0$ tal que, para todo $\vec x \in E$, \[\norm{f(\vec x)}_F < r\]
+\end{definition}
+
+\begin{definition}[Segmento]
+	Seja $(E, \norm\ )$ espaço normado. Dados $\vec a,\vec b\in E$, definimos o \emph{segmento} 
+	(que liga $\vec a$ a $\vec b$) como sendo o conjunto:
+	\[[\vec a, \vec b] = \set{\vec z \in E \st \vec z = (1-t)\vec a + t\vec b \text{ para algum }t\in[0,1]}\]
+\end{definition}
+
+\begin{definition}[Conjunto Convexo]
+	Dizemos que $X \subset E$ é \emph{convexo} quando $[\vec x, \vec y] \subset X$ para todos
+	$\vec x,\vec y\in X$.
+\end{definition}
+
+\begin{definition}[Ponto Interior]
+	Seja $(E,\norm\ )$ espaço normado, e $X \subset E$. Dizemos que $a \in X$ é \emph{ponto interior}
+	a $X$ quando existe $r_a > 0$ tal que $\oball a{r_a} \subset X$. 
+\end{definition}
+
+\begin{definition}[Interior de um Conjunto]
+	O conjunto dos pontos interiores de $X \subset E$ é chamado de \emph{interior} de $X$
+	é denotado por $\interior X$.
+\end{definition}
+
+\begin{fact}
+	\begin{enumerate}
+		\item[]
+		\item $\interior X \subset X$
+		\item $X \subset Y \implies \interior X \subset \interior Y$
+	\end{enumerate}
+\end{fact}
+
+\begin{definition}[Conjunto Aberto]
+	Dizemos que $A \subset E$ é \emph{aberto} quando todo ponto do conjunto $A$
+	é ponto interior a $A$, isto é, $\interior A = A$.
+\end{definition}
