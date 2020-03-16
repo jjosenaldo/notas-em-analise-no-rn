@@ -197,3 +197,52 @@
 	Dizemos que $A \subset E$ é \emph{aberto} quando todo ponto do conjunto $A$
 	é ponto interior a $A$, isto é, $\interior A = A$.
 \end{definition}
+
+\begin{fact}
+	Bolas abertas são conjuntos abertos.
+\end{fact}
+
+\begin{fact}[Propriedades de Abertos]
+	Seja $(E, \norm \ )$ um espaço normado. Então 
+	\begin{enumerate}
+		\item Se $X$ e $Y$ são abertos em $E$, $X\cap Y$ é aberto em $E$.
+		\item Se $(X_\lambda)_{\lambda \in L}$ é uma família de conjuntos abertos, então
+		$\bigcup\limits_{\lambda \in L}X_\lambda$ é um conjunto aberto.
+	\end{enumerate}
+\end{fact}
+
+\begin{definition}
+	Seja $(E,\norm\ )$ um espaço normado, $X \subset E$ e $a \in E$. Dizemos que $a$
+	pertence à \emph{fronteira} de $X$, e denotamos $a \in \partial X$ (ou $a \in \border X$) quando 
+	$a \notin \interior X$ e $a \notin \interior(\compl X)$.
+\end{definition}
+
+\begin{fact}
+	Dado $E$ espaço normado e $X \subset E$, então o conjunto 
+	$\set{\interior X, \interior(\compl X), \border X}$ é uma partição de $X$.
+\end{fact}
+
+\begin{fact}[Propriedades da Fronteira]
+	Sejam $E$ um espaço normado e $X \subset E$.
+	\begin{enumerate}
+		\item $X \subset \interior X \cup \border X$.
+		\item Se $\border X = \emptyset$, então $X$ é aberto.
+	\end{enumerate}
+\end{fact}
+
+\begin{definition}[Abertos Relativos]
+	Sejam $E$ espaço normado e $A \subset X \subset E$. Dizemos que 
+	$A$ é aberto em $X$ (aberto \emph{relativo} a $X$) quando dado $a \in A$,
+	existe $r > 0$ tal que $\oball ar \cap X \subset A$.
+\end{definition}
+
+\begin{theorem}
+	Sejam $E$ espaço normado e $A \subset X \subset E$. Então 
+	$A$ é aberto em $X$ sse existe $U \subset E$ aberto tal que 
+	$A = U \cap X$.
+\end{theorem}
+
+\begin{fact}
+	Sejam $E$ espaço normado e $A \subset X \subset E$ com $X$ aberto. 
+	Então $A$ é aberto em $X$ sse $A$ é aberto.
+\end{fact}
